@@ -1,0 +1,24 @@
+<html ng-app="foobar-app">
+<head>
+  <script src="node_modules/angular/angular.js"></script>
+  <!-- TODO  remember to insert your scripts here-->
+  <script src="app.js"></script>
+  <script src="shared/http.service.js"></script>
+  <script src="shared/date.pipe.js"></script>
+  <script src="shared/top-nav.component.js"></script>
+  <script src="to-do/to-do.component.js"></script>
+  <script src="parent/parent.component.js"></script>
+  <script src="parent/child/child.component.js"></script>
+
+  <link href="shared/styles.css" rel="stylesheet">
+
+</head>
+<body ng-controller="FoobarController">
+<top-nav title="title"></top-nav>
+<main>
+  foobar: {{foobar}}
+  <to-do></to-do>
+  <parent></parent>
+</main>
+</body>
+</html>

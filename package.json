@@ -1,0 +1,16 @@
+{
+  "name": "angularjs-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node_modules/less/bin/lessc shared/styles.less shared/styles.css",
+    "server": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5.11",
+    "less": "^2.7.3"
+  }
+}

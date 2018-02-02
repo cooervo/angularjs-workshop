@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "title": "Buy groceries",
+      "message": "orange, spinach, meat, milk"
+    },
+    {
+      "title": "Learn angularjs",
+      "message": "must use 1 way data binding"
+    },
+    {
+      "title": "Clean blankets",
+      "message": "will clean",
+      "date": 1517565087079
+    },
+    {
+      "title": "Example",
+      "message": "bla bla bla",
+      "date": 1517465087079
+    }
+  ]
+}
