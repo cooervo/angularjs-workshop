@@ -1,16 +1,19 @@
 <div class="todo-wrapper">
-    foobar: {{foobar}}
+  foobar: {{foobar}}
+  <br>
+  <br>
+  <input type='text' ng-model='searchText' placeholder="Search"/><!-- Ng model: Used inside form elements and has two-way data binding -->
   <br>
   <br>
   <ul class="todos-list">
     <!-- Notice: use of ng-repeat -->
-    <li ng-repeat="todo in todos"
+    <li ng-repeat="todo in todos | filter:searchText"
         ng-class="$index%2==0 ? 'even-row' : 'odd-row'"> <!-- Notice: use of ng-class + ternary operator -->
       {{$index}}  <!-- Notice: index comes from ng-repeat -->
       <p><label>title:</label><span>{{todo.title}}</span></p>
       <p><label>message:</label><span>{{todo.message}}</span></p>
+      <!-- Notice: use of filter to format the Date, but also angular has many built in filters -->
       <p ng-if="todo.date"><label>date:</label><span>{{todo.date | dateFormatter}}</span></p>
-      <!-- Notice: use of filter to format the Date, but also angular has many built in pipes -->
       <p ng-if="todo.date"><label>unformatted date:</label><span>{{todo.date }}</span></p>
     </li>
   </ul>

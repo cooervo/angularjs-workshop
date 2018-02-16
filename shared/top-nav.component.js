@@ -3,11 +3,10 @@ angular.module('foobar-app')
   // notice also controller is not needed here because it is stateless
   // notice: component name must be camelCased even though its used as dash-cased in html
   .component('topNav', {
-    template:
+    template: //notice we can inject small templates directly in component or use templateUrl for bigger ones
       `<header>
         <div class="centerer">
-          <h1>{{::$ctrl.title}}</h1>
-          <h1>{{::$ctrl}}</h1>
+          <h1>{{::$ctrl.title}}</h1>{{$ctrl}}<!--notice useful for debugging-->
           <nav>
             <ul>
               <li>home</li>
@@ -17,6 +16,6 @@ angular.module('foobar-app')
         </div>
       </header>`,
     bindings: {
-      title: '<' //notice: one-way binding
+      title: '<' //notice: one-way binding is the recommended way
     }
   });

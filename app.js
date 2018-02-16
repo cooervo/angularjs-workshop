@@ -1,10 +1,13 @@
-angular.module('foobar-app', [])
-  .controller('FoobarController', function($scope) {
-    $scope.title = 'Title Example' // change value here it changes in child component
-    $scope.foobar = 'Foobar @ app.js'
+var app = angular.module('foobar-app', [])
 
-    log('$scope',$scope)
-  });
+app.controller('FoobarController', function($scope, $rootScope) {
+  $scope.title = 'Title Example' // change value here it changes in child component
+  $scope.foobar = 'Foobar @ app.js'
+
+  log('$rootScope', $rootScope)
+  log('$scope', $scope)
+  //Remember: $scope ~= this.noGctx
+});
 
 const log = (...x) => {
   console.log(...x)

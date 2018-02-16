@@ -1,5 +1,4 @@
-angular.module('foobar-app')
-  .component('parent', {
+app.component('parent', {
     controller: ($scope) => {
       this.clicked = false //notice we don't use $scope here because we don't need access to this var on template
 
@@ -21,7 +20,9 @@ angular.module('foobar-app')
           <p class="big">parentVar: {{parentVar}}</p>
           
           <br>
+          
           <child></child>
+          <hide-me></hide-me>
       </div>`,
     bindings: {
       title: '<' //notice: one-way binding

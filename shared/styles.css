@@ -86,8 +86,20 @@ ol li {
   font-size: 30px;
 }
 .even-row {
-  background: rgba(217, 96, 0, 0.1);
+  background: rgba(217, 96, 0, 0.2);
 }
 .odd-row {
-  background: rgba(0, 195, 217, 0.1);
+  background: rgba(0, 195, 217, 0.2);
+}
+.hide-me {
+  background: rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.hide-me b {
+  color: red;
+  font-weight: 900;
+}
+.hide-me button {
+  padding: 1rem 2rem;
 }
